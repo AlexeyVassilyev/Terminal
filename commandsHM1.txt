@@ -1,0 +1,730 @@
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal
+$ git clone https://github.com/AlexeyVassilyev/Terminal.git
+Cloning into 'Terminal'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal
+$ ls -la
+total 0
+drwxr-xr-x 1 AlexeyVassilyev 197121 0 Aug 12 00:40 ./
+drwxr-xr-x 1 AlexeyVassilyev 197121 0 Aug 12 00:39 ../
+drwxr-xr-x 1 AlexeyVassilyev 197121 0 Aug 12 00:40 Terminal/
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal
+$ cd Terminal
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ ls
+README.md
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ cat README.md
+# Terminal
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ vim README.md
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ git commit -m "First commit"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ git add .
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the nex
+t time Git touches it
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ git commit -m "First commit"
+[main 4230b1d] First commit
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 443 bytes | 443.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/AlexeyVassilyev/Terminal.git
+   09c4668..4230b1d  main -> main
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ pwd
+/d/QA/HM1Terminal/Terminal
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ mkdir f1
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ cd f1
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ mkdir f2 f3 f4
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ ls
+f2/  f3/  f4/
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ cd f2
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ touch Terminal{1..3}.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ ls
+Terminal1.txt  Terminal2.txt  Terminal3.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ touch Terminal{4..5}.json
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ ls
+Terminal1.txt  Terminal2.txt  Terminal3.txt  Terminal4.json  Terminal5.json
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ mkdir f5 f6 f7
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ ls
+Terminal1.txt  Terminal3.txt   Terminal5.json  f6/
+Terminal2.txt  Terminal4.json  f5/             f7/
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ vim Terminal1.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ vim Terminal1.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ cat Terminal1.txt
+В жизни так бывает
+Что любовь приходит вновь
+Только, пламя догорает
+И не льется в венах кровь
+В жизни так бывает
+Что любовь приходит вновь
+Только, пламя догорает
+И не льется в венах кровь
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ ls
+Terminal1.txt  Terminal3.txt   Terminal5.json  f6/
+Terminal2.txt  Terminal4.json  f5/             f7/
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ cd f1
+bash: cd: f1: No such file or directory
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ cd ..
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ pwd
+/d/QA/HM1Terminal/Terminal/f1
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ ls
+f2/  f3/  f4/
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ mv Terminal4.json /d/QA/HM1Terminal/Terminal/f1
+mv: cannot stat 'Terminal4.json': No such file or directory
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ cd .
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ cd f2
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ mv Terminal4.json /d/QA/HM1Terminal/Terminal/f1
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ ls
+Terminal1.txt  Terminal2.txt  Terminal3.txt  Terminal5.json  f5/  f6/  f7/
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ mv Terminal5.json /d/QA/HM1Terminal/Terminal/f1
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ ls
+Terminal1.txt  Terminal2.txt  Terminal3.txt  f5/  f6/  f7/
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ cd ..
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ ls
+Terminal4.json  Terminal5.json  f2/  f3/  f4/
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ cp Terminal4.txt NewTerminal4.txt
+cp: cannot stat 'Terminal4.txt': No such file or directory
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ cp Terminal4.json NewTerminal4.json
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ ls
+NewTerminal4.json  Terminal4.json  Terminal5.json  f2/  f3/  f4/
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ cp Terminal5.json NewTerminal5.json
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ ls
+NewTerminal4.json  Terminal4.json  f2/  f4/
+NewTerminal5.json  Terminal5.json  f3/
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ mv NewTerminal4.json /d/QA/HM1Terminal/Terminal/f1/f3
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ ls
+NewTerminal5.json  Terminal4.json  Terminal5.json  f2/  f3/  f4/
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ mv NewTerminal5.json /d/QA/HM1Terminal/Terminal/f1/f3\
+>
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ ls
+Terminal4.json  Terminal5.json  f2/  f3/  f4/
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ cd f3
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f3 (main)
+$ ls
+NewTerminal4.json  NewTerminal5.json
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f3 (main)
+$ find -name Terminal1.txt -print
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f3 (main)
+$ ls
+NewTerminal4.json  NewTerminal5.json
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f3 (main)
+$ vim Terminal1.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f3 (main)
+$ find -name Terminal1.txt -print
+./Terminal1.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f3 (main)
+$ ls | grep Terminal1.txt
+Terminal1.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f3 (main)
+$ ls | grep Terminal
+NewTerminal4.json
+NewTerminal5.json
+Terminal1.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f3 (main)
+$ cd ..
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ cd..
+bash: cd..: command not found
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ cd ..
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ ls | grep Terminal1
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ ls | grep -r Terminal
+.git/config:    url = https://github.com/AlexeyVassilyev/Terminal.git
+.git/logs/HEAD:0000000000000000000000000000000000000000 09c4668d66f4a38b7999146737b018c274ef6650 AlexeyVassilyev <alexeyvassilyev0@gmail.com> 1691790030 +0300 clone: from https://github.com/AlexeyVassilyev/Terminal.git
+.git/logs/refs/heads/main:0000000000000000000000000000000000000000 09c4668d66f4a38b7999146737b018c274ef6650 AlexeyVassilyev <alexeyvassilyev0@gmail.com> 1691790030 +0300       clone: from https://github.com/AlexeyVassilyev/Terminal.git
+.git/logs/refs/remotes/origin/HEAD:0000000000000000000000000000000000000000 09c4668d66f4a38b7999146737b018c274ef6650 AlexeyVassilyev <alexeyvassilyev0@gmail.com> 1691790030 +0300      clone: from https://github.com/AlexeyVassilyev/Terminal.git
+README.md:# Terminal
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ ls | grep -r Terminal1.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ find -name Terminal1.txt -print
+./f1/f2/Terminal1.txt
+./f1/f3/Terminal1.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ ls | grep  Terminal1.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ ls | grep -l  Terminal1.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$git grep -l Terminal1.txt
+(standard input)
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ git grep Terminal1.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ git grep -n Terminal1.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        f1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ tailf Terminal1.txt
+bash: tailf: command not found
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ tail -f Terminal1.txt
+tail: cannot open 'Terminal1.txt' for reading: No such file or directory
+tail: no files remaining
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ cd .
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ tail -f Terminal1.txt
+tail: cannot open 'Terminal1.txt' for reading: No such file or directory
+tail: no files remaining
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ cd f1
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ cd f2
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ ls
+Terminal1.txt  Terminal2.txt  Terminal3.txt  f5/  f6/  f7/
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ tail -f Terminal1.txt
+В жизни так бывает
+Что любовь приходит вновь
+Только, пламя догорает
+И не льется в венах кровь
+В жизни так бывает
+Что любовь приходит вновь
+Только, пламя догорает
+И не льется в венах кровь
+
+ПРИВЕТ АНДРЕЙ ТУРУРУРУ
+
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ head -n3  Terminal1.txt
+В жизни так бывает
+Что любовь приходит вновь
+Только, пламя догорает
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$  tail -n3  Terminal1.txt
+Что любовь приходит вновь
+Только, пламя догорает
+И не льется в венах кровь
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ less -c Terminal1.txt
+
+[1]+  Stopped                 less -c Terminal1.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ date
+Sat Aug 12 02:02:14 RTZ 2023
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ date +"%H:%M %d/%m/%Y"
+02:02 12/08/2023
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ git add .
+warning: in the working copy of 'f1/f2/Terminal1.txt', LF will be replaced by CRLF the
+ next time Git touches it
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Terminal1.txt
+        new file:   Terminal2.txt
+        new file:   Terminal3.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../Terminal4.json
+        ../Terminal5.json
+        ../f3/
+
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ git commit -m "2 commit"
+[main c5598a9] 2 commit
+ 3 files changed, 8 insertions(+)
+ create mode 100644 f1/f2/Terminal1.txt
+ create mode 100644 f1/f2/Terminal2.txt
+ create mode 100644 f1/f2/Terminal3.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../Terminal4.json
+        ../Terminal5.json
+        ../f3/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ git add .
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../Terminal4.json
+        ../Terminal5.json
+        ../f3/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ git add Terminal4.json
+fatal: pathspec 'Terminal4.json' did not match any files
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ cd f3
+bash: cd: f3: No such file or directory
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ ls
+Terminal1.txt  Terminal2.txt  Terminal3.txt  f5/  f6/  f7/
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ cd ..
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ ls
+Terminal4.json  Terminal5.json  f2/  f3/  f4/
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ git add .\
+> git add .
+fatal: pathspec '.git' did not match any files
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ git add .
+warning: in the working copy of 'f1/f3/Terminal1.txt', LF will be replaced by CRLF the
+ next time Git touches it
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Terminal4.json
+        new file:   Terminal5.json
+        new file:   f3/NewTerminal4.json
+        new file:   f3/NewTerminal5.json
+        new file:   f3/Terminal1.txt
+
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 528 bytes | 528.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/AlexeyVassilyev/Terminal.git
+   4230b1d..c5598a9  main -> main
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ ls
+Terminal4.json  Terminal5.json  f2/  f3/  f4/
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ cd f3
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f3 (main)
+$ ls
+NewTerminal4.json  NewTerminal5.json  Terminal1.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f3 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   ../Terminal4.json
+        new file:   ../Terminal5.json
+        new file:   NewTerminal4.json
+        new file:   NewTerminal5.json
+        new file:   Terminal1.txt
+
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f3 (main)
+$ git add .
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f3 (main)
+$ git commit -m "3"
+[main ac1f96c] 3
+ 5 files changed, 1 insertion(+)
+ create mode 100644 f1/Terminal4.json
+ create mode 100644 f1/Terminal5.json
+ create mode 100644 f1/f3/NewTerminal4.json
+ create mode 100644 f1/f3/NewTerminal5.json
+ create mode 100644 f1/f3/Terminal1.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f3 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f3 (main)
+$ git push
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 503 bytes | 503.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/AlexeyVassilyev/Terminal.git
+   c5598a9..ac1f96c  main -> main
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f3 (main)
+$ cd ..
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ ls
+Terminal4.json  Terminal5.json  f2/  f3/  f4/
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ cd f4
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f4 (main)
+$ cat > test.txt
+я так понимаю папки без файлов не отправляются на удаленный репозиторий
+поэтому этот файл тут
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f4 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f4 (main)
+$ cd ..
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        f4/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ git add .
+warning: in the working copy of 'f1/f4/test.txt', LF will be replaced by CRLF the next
+ time Git touches it
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ git commit -m "4'
+>
+> ^C
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   f4/test.txt
+
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ git commit -m "test"
+[main 2e8a59c] test
+ 1 file changed, 1 insertion(+)
+ create mode 100644 f1/f4/test.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 481 bytes | 481.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/AlexeyVassilyev/Terminal.git
+   ac1f96c..2e8a59c  main -> main
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ ls
+Terminal4.json  Terminal5.json  f2/  f3/  f4/
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ cd f2
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ ls
+Terminal1.txt  Terminal2.txt  Terminal3.txt  f5/  f6/  f7/
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ cd f5
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2/f5 (main)
+$ cat > test2.txt
+g
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2/f5 (main)
+$ cd f6
+bash: cd: f6: No such file or directory
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2/f5 (main)
+$ cd ..
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ cd f6
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2/f6 (main)
+$ cat > test3.txt
+f
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2/f6 (main)
+$ cd ..
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ cd f7
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2/f7 (main)
+$ cat > test4.txt
+fg
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2/f7 (main)
+$ cd ...
+bash: cd: ...: No such file or directory
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2/f7 (main)
+$ cd .
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2/f7 (main)
+$ cd ..
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1/f2 (main)
+$ cd ..
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal/f1 (main)
+$ cd ..
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        f1/f2/f5/
+        f1/f2/f6/
+        f1/f2/f7/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ git add .
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ git commit -m "5"
+[main 7613b32] 5
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 f1/f2/f5/test2.txt
+ create mode 100644 f1/f2/f6/test3.txt
+ create mode 100644 f1/f2/f7/test4.txt
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$ git push
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 629 bytes | 629.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/AlexeyVassilyev/Terminal.git
+   2e8a59c..7613b32  main -> main
+
+AlexeyVassilyev@DESKTOP-3N1GH20 MINGW64 /d/QA/HM1Terminal/Terminal (main)
+$
